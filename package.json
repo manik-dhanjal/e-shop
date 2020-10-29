@@ -1,0 +1,33 @@
+{
+  "name": "e-shop",
+  "version": "1.0.0",
+  "description": "this is a ecommerce site",
+  "main": "index.js",
+  "type":"module",
+  "scripts": {
+    "start": "node backend/server.js",
+    "server": "nodemon backend/server.js",
+    "client": "npm start --prefix frontend",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/manik-dhanjal/e-shop.git"
+  },
+  "author": "Manik singh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/manik-dhanjal/e-shop/issues"
+  },
+  "homepage": "https://github.com/manik-dhanjal/e-shop#readme",
+  "dependencies": {
+    "bcrypt": "^5.0.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.10.11"
+  },
+  "devDependencies": {
+    "concurrently": "^5.3.0",
+    "nodemon": "^2.0.6"
+  }
+}
