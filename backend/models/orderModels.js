@@ -1,5 +1,5 @@
 import mongoose from "mongoose"
-import User from "./userModels"
+import User from "./userModels.js"
 
 const OrderSchema=new mongoose.Schema({
     user:{
@@ -67,4 +67,4 @@ const OrderSchema=new mongoose.Schema({
 
 const Order = mongoose.model('order',OrderSchema)
 
-export default Order;
+export default Order; 

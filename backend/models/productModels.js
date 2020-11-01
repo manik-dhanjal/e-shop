@@ -1,16 +1,22 @@
 import mongoose from "mongoose"
+import User from "./userModels.js";
 
 
 const ProductSchema = mongoose.Schema({
+    user:{
+        type:mongoose.Schema.Types.ObjectId,
+        required:true,
+        ref:'User'
+    },
     name:{
         type:String,
         required:true
     },
-    desc:{
+    description:{
         type:String,
         required:true
     },
-    ratings:{
+    rating:{
         type:Number,
         default:0
     },
@@ -22,8 +28,8 @@ const ProductSchema = mongoose.Schema({
         type:Number,
         default:0
     },
-    images:{
-        type:[string],
+    image:{
+        type:[String],
         required:true
     },
     category:{
@@ -42,7 +48,6 @@ const ProductSchema = mongoose.Schema({
                 name:String,
                 value:String
             }],
-            default:false
     },
     shipping:{
         dimensions:{
@@ -57,6 +62,6 @@ const ProductSchema = mongoose.Schema({
     timestamps:true
 })
 
-const product= mongoose.model('Product',ProductSchema)
+const Product= mongoose.model('Product',ProductSchema)
 
-export default product;
+export default Product;
