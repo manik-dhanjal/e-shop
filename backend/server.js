@@ -17,6 +17,7 @@ app.use("/api/product",product)
 app.get("/",(req,res)=>{
     res.send("API is running nikal madarchod...")
 })
+
 app.use(notFound)
 app.use(mainErrorHandler)
 
